@@ -1,0 +1,16 @@
+{
+	"private": true,
+	"scripts": {
+		"lerna": "lerna bootstrap"
+	},
+	"workspaces": [
+		"packages/*"
+	],
+	"devDependencies": {
+		"lerna": "^2.9.0",
+		"npm-run-all": "^4.1.2"
+	},
+	"dependencies": {
+		
+	}
+}

@@ -1,0 +1,64 @@
+// 建议所有项目自定义样式放在该文件夹下
+
+@primary-color: #1bab5b;
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 @header-padding;
+    width: 100%;
+    height: @header-hg;
+    background-color: @header-bg;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    z-index: @zindex + 10;
+    .logo {
+        margin-left: -@header-padding;
+        width: @aside-wd;
+        transition: width .2s @layout-ease;
+        a {
+            display: block;
+            text-align: center;
+        }
+        div {
+            vertical-align: middle;
+            max-width: 100%;
+            animation: fadeIn 1s;
+            &.collapsed {
+                display: none;
+            }
+            &.expanded {
+                display: inline;
+            }
+
+            .site_tile {
+                color: white;
+              display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    margin: 0 0 0 12px;
+    font-family: 'Myriad Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+            }
+        }
+    }
+}
+
+.aside-collapsed {
+    .header {
+        .logo {
+            width: @aside-collapsed-wd;
+            div {
+                &.collapsed {
+                    display: inline;
+                }
+                &.expanded {
+                    display: none;
+                }
+            }
+        }
+    }
+}
