@@ -79,7 +79,7 @@ export class StartupService {
         // 初始化菜单
         this.menuService.add([
             {
-                text: '主导航',
+                text: '',
                 group: true,
                 children: [
                     {
@@ -88,10 +88,42 @@ export class StartupService {
                         icon: 'icon-speedometer'
                     },
                     {
-                        text: '快捷菜单',
+                        text: '平台监控',
                         icon: 'icon-rocket',
-                        shortcut_root: true
-                    }
+                        shortcut_root: true,
+                        children:[
+                            {
+                                text: '仪表盘1',
+                                link: '/dashboard',
+                                icon: 'icon-speedometer'
+                            },
+                            {
+                                text: '仪表盘2',
+                                link: '/dashboard',
+                            }
+                             
+                        ]
+                    },//<i class="anticon anticon-chrome"></i>
+                    {
+                        text: '页面1',
+                        link: '/dashboard',
+                        icon: 'anticon-chrome'
+                    },
+                    {
+                        text: '页面2',
+                        link: '/dashboard',
+                        icon: 'icon-note'
+                    },
+                    {
+                        text: '页面3',
+                        link: '/dashboard',
+                        icon: 'icon-safari'
+                    },
+                    {
+                        text: '页面4',
+                        link: '/dashboard',
+                        icon: 'icon-opear'
+                    },
                 ]
             }
         ]);
