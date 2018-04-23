@@ -4,6 +4,7 @@ import { SharedModule } from '@shared/shared.module';
 import { RouteRoutingModule } from './routes-routing.module';
 // dashboard pages
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TestPageComponent } from './testpage/testpage.component';
 // passport pages
 import { UserLoginComponent } from './passport/login/login.component';
 import { UserRegisterComponent } from './passport/register/register.component';
@@ -18,6 +19,7 @@ import { Exception500Component } from './exception/500.component';
     imports: [ SharedModule, RouteRoutingModule ],
     declarations: [
         DashboardComponent,
+        TestPageComponent,
         // passport pages
         UserLoginComponent,
         UserRegisterComponent,

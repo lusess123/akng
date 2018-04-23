@@ -7,6 +7,7 @@ import { LayoutFullScreenComponent } from '../layout/fullscreen/fullscreen.compo
 import { LayoutPassportComponent } from '../layout/passport/passport.component';
 // dashboard pages
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TestPageComponent } from './testpage/testpage.component';
 // passport pages
 import { UserLoginComponent } from './passport/login/login.component';
 import { UserRegisterComponent } from './passport/register/register.component';
@@ -24,10 +25,11 @@ const routes: Routes = [
         children: [
             { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
             { path: 'dashboard', component: DashboardComponent, data: { title: '仪表盘' } },
+            {path:'testpage',component:TestPageComponent},
             // 业务子模块
             // { path: 'widgets', loadChildren: './widgets/widgets.module#WidgetsModule' }
             { path: 'aa/403', component: Exception403Component },
-            { path: '404', component: Exception404Component }
+            { path: 'nn/404', component: Exception404Component }
         ]
     },
     // 全屏布局
