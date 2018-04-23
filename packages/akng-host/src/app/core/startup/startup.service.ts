@@ -138,9 +138,9 @@ export class StartupService {
         // https://github.com/angular/angular/issues/15088
         return new Promise((resolve, reject) => {
             // http
-            // this.viaHttp(resolve, reject);
+            this.viaHttp(resolve, reject);
             // mock
-            this.viaMock(resolve, reject);
+           // this.viaMock(resolve, reject);
         });
     }
 }
