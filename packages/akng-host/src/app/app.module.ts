@@ -17,8 +17,6 @@ import { registerLocaleData } from '@angular/common';
 import localeZhHans from '@angular/common/locales/zh-Hans';
 registerLocaleData(localeZhHans);
 
-// JSON-Schema form
-import { JsonSchemaModule } from '@shared/json-schema/json-schema.module';
 
 export function StartupServiceFactory(startupService: StartupService): Function {
     return () => startupService.load();
@@ -36,7 +34,7 @@ export function StartupServiceFactory(startupService: StartupService): Function 
         CoreModule,
         SharedModule,
         LayoutModule,
-        JsonSchemaModule,
+        
         RoutesModule
     ],
     providers: [

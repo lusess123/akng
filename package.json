@@ -2,7 +2,7 @@
 	"private": true,
 	"scripts": {
 		"lerna": "lerna bootstrap",
-		"host":"cd packages/akng-host;npm run start ;cd .."
+		"host": "cd packages/akng-host;npm run start ;cd .."
 	},
 	"workspaces": [
 		"packages/*"

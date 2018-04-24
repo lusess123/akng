@@ -1,11 +1,11 @@
-import { Router } from '@angular/router';
 import { Injectable, Injector, Inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { zip } from 'rxjs/observable/zip';
 import { catchError } from 'rxjs/operators';
-import { MenuService, SettingsService, TitleService } from '@delon/theme';
+import { MenuService, SettingsService, TitleService, ALAIN_I18N_TOKEN } from '@delon/theme';
+import { DA_SERVICE_TOKEN, ITokenService } from '@delon/auth';
 import { ACLService } from '@delon/acl';
-import { ITokenService, DA_SERVICE_TOKEN } from '@delon/auth';
 
 /**
  * 用于应用启动时
@@ -66,7 +66,7 @@ export class StartupService {
         };
         const user: any = {
             name: 'Admin',
-            avatar: './assets/img/zorro.svg',
+            avatar: './assets/img/avatar.jpg',
             email: 'cipchk@qq.com',
             token: '123456789'
         };
@@ -85,45 +85,13 @@ export class StartupService {
                     {
                         text: '仪表盘',
                         link: '/dashboard',
-                        icon: 'icon-speedometer'
+                        icon: 'anticon anticon-appstore-o'
                     },
                     {
-                        text: '平台监控',
-                        icon: 'icon-rocket',
-                        shortcut_root: true,
-                        children:[
-                            {
-                                text: '仪表盘1',
-                                link: '/dashboard',
-                                icon: 'icon-speedometer'
-                            },
-                            {
-                                text: '仪表盘2',
-                                link: '/dashboard',
-                            }
-                             
-                        ]
-                    },//<i class="anticon anticon-chrome"></i>
-                    {
-                        text: '页面1',
-                        link: '/dashboard',
-                        icon: 'anticon-chrome'
-                    },
-                    {
-                        text: '页面2',
-                        link: '/dashboard',
-                        icon: 'icon-note'
-                    },
-                    {
-                        text: '页面3',
-                        link: '/dashboard',
-                        icon: 'icon-safari'
-                    },
-                    {
-                        text: '页面4',
-                        link: '/dashboard',
-                        icon: 'icon-opear'
-                    },
+                        text: '快捷菜单',
+                        icon: 'anticon anticon-rocket',
+                        shortcut_root: true
+                    }
                 ]
             }
         ]);
@@ -138,9 +106,9 @@ export class StartupService {
         // https://github.com/angular/angular/issues/15088
         return new Promise((resolve, reject) => {
             // http
-            this.viaHttp(resolve, reject);
-            // mock
-           // this.viaMock(resolve, reject);
+             this.viaHttp(resolve, reject);
+            // mock：请勿在生产环境中这么使用，viaMock 单纯只是为了模拟一些数据使脚手架一开始能正常运行
+            //this.viaMock(resolve, reject);
         });
     }
 }

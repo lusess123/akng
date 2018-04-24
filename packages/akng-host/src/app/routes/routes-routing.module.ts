@@ -7,13 +7,13 @@ import { LayoutFullScreenComponent } from '../layout/fullscreen/fullscreen.compo
 import { LayoutPassportComponent } from '../layout/passport/passport.component';
 // dashboard pages
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { TestPageComponent } from './testpage/testpage.component';
 // passport pages
 import { UserLoginComponent } from './passport/login/login.component';
 import { UserRegisterComponent } from './passport/register/register.component';
 import { UserRegisterResultComponent } from './passport/register-result/register-result.component';
 // single pages
 import { CallbackComponent } from './callback/callback.component';
+import { UserLockComponent } from './passport/lock/lock.component';
 import { Exception403Component } from './exception/403.component';
 import { Exception404Component } from './exception/404.component';
 import { Exception500Component } from './exception/500.component';
@@ -25,11 +25,9 @@ const routes: Routes = [
         children: [
             { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
             { path: 'dashboard', component: DashboardComponent, data: { title: '仪表盘' } },
-            {path:'testpage',component:TestPageComponent},
+            { path: '404', component: Exception404Component },
             // 业务子模块
             // { path: 'widgets', loadChildren: './widgets/widgets.module#WidgetsModule' }
-            { path: 'aa/403', component: Exception403Component },
-            { path: 'nn/404', component: Exception404Component }
         ]
     },
     // 全屏布局
@@ -51,6 +49,7 @@ const routes: Routes = [
     },
     // 单页不包裹Layout
     { path: 'callback/:type', component: CallbackComponent },
+    { path: 'lock', component: UserLockComponent, data: { title: '锁屏', titleI18n: 'lock' } },
     { path: '403', component: Exception403Component },
     { path: '404', component: Exception404Component },
     { path: '500', component: Exception500Component },

@@ -1,12 +1,12 @@
 <div class="logo">
     <a [routerLink]="['/']">
         <div class="expanded">
-        <img   src="./assets/img/lwmax.png" alt="{{settings.app.name}}" style="max-height:40px;" />
-        <span class="site_tile">绿湾运维中心</span>
-    </div>
-    <div class="collapsed">
-        <img  src="./assets/img/lwmax.png" alt="{{settings.app.name}}" style="max-height:30px;" />
-    </div>
+            <img   src="./assets/img/lwmax.png" alt="{{settings.app.name}}" style="max-height:40px;" />
+            <span class="site_tile">绿湾运维中心</span>
+        </div>
+        <div class="collapsed">
+            <img  src="./assets/img/lwmax.png" alt="{{settings.app.name}}" style="max-height:30px;" />
+        </div>
     </a>
 </div>
 <div class="top-nav-wrap">
@@ -22,6 +22,12 @@
             <a class="item" href="//github.com/cipchk/ng-alain" target="_blank">
                 <i class="anticon anticon-github"></i>
             </a>
+        </li> -->
+        <!-- Lock Page -->
+        <!-- <li class="hidden-xs">
+            <div class="item" [routerLink]="['/lock']">
+                <i class="anticon anticon-lock"></i>
+            </div>
         </li> -->
         <!-- Search Button -->
         <li class="header-search__btn" (click)="searchToggleChange()">
@@ -45,13 +51,12 @@
             <header-icon></header-icon>
         </li> -->
         <!-- Settings -->
-         <li class="hidden-xs">
+        <!-- <li class="hidden-xs">
             <nz-dropdown nzTrigger="click" nzPlacement="bottomRight">
-                
-                <div nz-menu style="width:200px">
-                    <div nz-menu-item class="theme-switch">
-                        <header-theme></header-theme>
-                    </div>
+                <div class="item" nz-dropdown>
+                    <i class="anticon anticon-setting"></i>
+                </div>
+                <div nz-menu style="width:200px;">
                     <div nz-menu-item>
                         <header-fullscreen></header-fullscreen>
                     </div>
@@ -60,9 +65,9 @@
                     </div>
                 </div>
             </nz-dropdown>
-        </li>
+        </li> -->
         <li class="hidden-xs">
             <header-user></header-user>
-        </li> 
+        </li>
     </ul>
 </div>

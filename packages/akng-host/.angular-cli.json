@@ -22,7 +22,6 @@
         "styles.less"
       ],
       "scripts": [
-     
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
