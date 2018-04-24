@@ -15,6 +15,8 @@ import { Exception403Component } from './exception/403.component';
 import { Exception404Component } from './exception/404.component';
 import { Exception500Component } from './exception/500.component';
 
+import {TestPageComponent} from './testpage/testpage.component'
+
 @NgModule({
     imports: [ SharedModule, RouteRoutingModule ],
     declarations: [
@@ -28,7 +30,8 @@ import { Exception500Component } from './exception/500.component';
         UserLockComponent,
         Exception403Component,
         Exception404Component,
-        Exception500Component
+        Exception500Component,
+        TestPageComponent
     ]
 })
 export class RoutesModule {}

@@ -18,6 +18,8 @@ import { Exception403Component } from './exception/403.component';
 import { Exception404Component } from './exception/404.component';
 import { Exception500Component } from './exception/500.component';
 
+import { TestPageComponent } from './testpage/testpage.component'
+
 const routes: Routes = [
     {
         path: '',
@@ -26,6 +28,7 @@ const routes: Routes = [
             { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
             { path: 'dashboard', component: DashboardComponent, data: { title: '仪表盘' } },
             { path: '404', component: Exception404Component },
+            { path:'testpage',component:TestPageComponent}
             // 业务子模块
             // { path: 'widgets', loadChildren: './widgets/widgets.module#WidgetsModule' }
         ]
