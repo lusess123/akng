@@ -16,9 +16,20 @@ import { Exception404Component } from './exception/404.component';
 import { Exception500Component } from './exception/500.component';
 
 import {TestPageComponent} from './testpage/testpage.component'
+import {HostinfoComponent} from './testpage/hostinfo/hostinfo.component'
+import {Step1Component} from './testpage/step1/step1.component'
+import {TodolistComponent} from './todolist/todolist.component'
+import {CodepgaeComponent} from './codepage/codepage.component'
+import {lifecycleComponent} from './lifecycle/lifecycle.component'
+
+import {SonComponent}  from './lifecycle/son/son.component'
+import {LogService,  LogService2 } from './lifecycle/son/log.service'
 
 @NgModule({
     imports: [ SharedModule, RouteRoutingModule ],
+    providers:[
+        LogService   , LogService2
+    ],
     declarations: [
         DashboardComponent,
         // passport pages
@@ -31,7 +42,14 @@ import {TestPageComponent} from './testpage/testpage.component'
         Exception403Component,
         Exception404Component,
         Exception500Component,
-        TestPageComponent
+        TestPageComponent,
+        HostinfoComponent,
+        Step1Component,
+        TodolistComponent,
+        CodepgaeComponent,
+        lifecycleComponent,
+        SonComponent,
+       // LogService
     ]
 })
 export class RoutesModule {}

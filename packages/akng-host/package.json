@@ -46,7 +46,8 @@
     "screenfull": "^3.3.1",
     "simple-line-icons": "^2.4.1",
     "zone.js": "^0.8.18",
-    "ngx-countdown": "*"
+    "ngx-countdown": "*",
+    "bootstrap": "^4.1.0"
   },
   "devDependencies": {
     "@angular/cli": "^1.6.2",

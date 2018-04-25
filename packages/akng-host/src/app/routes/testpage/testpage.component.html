@@ -1,3 +1,38 @@
-<div class="content__title">
-    <h1>test page</h1>
+<page-header>
+    <h6>创建主机</h6>
+</page-header>
+
+<div nz-row   [nzGutter]="8">
+
+    <div nz-col [nzMd]="15">
+
+        <div>
+            <nz-steps [(nzCurrent)]="current">
+                <nz-step [nzTitle]="'选择映像'"></nz-step>
+                <nz-step [nzTitle]="'配置选择'"></nz-step>
+                <nz-step [nzTitle]="'网络设置'"></nz-step>
+                <nz-step [nzTitle]="'基本信息'"></nz-step>
+            </nz-steps>
+
+            <div class="steps-content">
+                <step1  *ngIf="current === 0"></step1>
+            </div>
+            <div class="steps-action">
+                <button nz-button [nzType]="'default'" (click)="pre()" *ngIf="current > 0">
+                    <span>上一步</span>
+                </button>
+                <button nz-button [nzType]="'default'" (click)="next()" *ngIf="current < 3">
+                    <span>下一步</span>
+                </button>
+                <button nz-button [nzType]="'primary'" (click)="done()" *ngIf="current === 3">
+                    <span>创建</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <div nz-col [nzMd]="2"></div>
+    <div nz-col [nzMd]="7">
+       <host-info ></host-info>
+    </div>
 </div>

@@ -19,6 +19,10 @@ import { Exception404Component } from './exception/404.component';
 import { Exception500Component } from './exception/500.component';
 
 import { TestPageComponent } from './testpage/testpage.component'
+import { HostinfoComponent} from './testpage/hostinfo/hostinfo.component'
+import {TodolistComponent} from './todolist/todolist.component'
+import {CodepgaeComponent} from './codepage/codepage.component'
+import {lifecycleComponent} from './lifecycle/lifecycle.component'
 
 const routes: Routes = [
     {
@@ -28,7 +32,10 @@ const routes: Routes = [
             { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
             { path: 'dashboard', component: DashboardComponent, data: { title: '仪表盘' } },
             { path: '404', component: Exception404Component },
-            { path:'testpage',component:TestPageComponent}
+            { path:'testpage',component:TestPageComponent},
+            { path:"todolist",component:TodolistComponent},
+            { path:"codepage",component:CodepgaeComponent},
+            {path:"lifecycle",component:lifecycleComponent}
             // 业务子模块
             // { path: 'widgets', loadChildren: './widgets/widgets.module#WidgetsModule' }
         ]

@@ -1,0 +1,57 @@
+<div>
+        <h6>配置详情</h6>
+        <table class=" table table-bordered table-dark">
+            <tbody>
+                <tr>
+                    <td data-width={{70}>映像</td>
+                    <td>{{Vm.os}}</td>
+                </tr>
+                <tr>
+                    <td data-width={{70}>支持物理机</td>
+                    <td>{{Vm.isPyth}}</td>
+                </tr>
+                <tr>
+                    <td>主机类型</td>
+                    <td>{{Vm.hostKind}}</td>
+                </tr>
+                <tr>
+                    <td>CPU</td>
+                    <td>{{Vm.cpu}}</td>
+                </tr>
+                <tr>
+                    <td>内存</td>
+                    <td>{{Vm.momery}}</td>
+                </tr>
+                <tr>
+                    <td>GPU</td>
+                    <td>{{Vm.gpu}}</td>
+                </tr>
+                <tr>
+                    <td>系统盘</td>
+                    <td>{{Vm.sysDist}}</td>
+                </tr>
+                <tr>
+                    <td>副本策略</td>
+                    <td>{{Vm.copyStategy}}</td>
+                </tr>
+                <tr>
+                    <td>名称</td><td>{{Vm.name}}</td></tr>
+                <tr>
+                    <td>Hostname</td><td>{{Vm.hostName}}</td></tr>
+                <tr>
+                    <td>数量</td>
+                    <td>{{Vm.count}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <h6>
+                <span>总价格:&nbsp;</span>
+                <span>{{Vm.hourCost}}</span>
+                <span>每小时</span>
+                <span >(合<span >
+                        <span >¥</span>{{Vm.monthCost}}</span>每月</span>
+                <span>)</span>
+            </h6>
+        </div>
+    </div>
