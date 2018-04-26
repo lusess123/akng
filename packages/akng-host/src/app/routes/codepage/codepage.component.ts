@@ -8,7 +8,7 @@ import {Component} from '@angular/core';
            <h6>代码生成</h6>
            </page-header>
            <div style="margin-bottom: 2rem;">  
-           <input nz-input placeholder="请输入组件名"   (input)="aaa($event)"   ></div>
+           <input nz-input placeholder="请输入组件名"   (input)="aaa($event)"   /></div>
            <div >
            <textarea row="400" nz-input [(ngModel)]="Code"   nzAutosize  ></textarea>
            </div>

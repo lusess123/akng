@@ -25,10 +25,12 @@ import {lifecycleComponent} from './lifecycle/lifecycle.component'
 import {SonComponent}  from './lifecycle/son/son.component'
 import {LogService,  LogService2 } from './lifecycle/son/log.service'
 
+import {TodolistService} from './todolist/todolist.service'
+
 @NgModule({
     imports: [ SharedModule, RouteRoutingModule ],
     providers:[
-        LogService   , LogService2
+        LogService   , LogService2,TodolistService
     ],
     declarations: [
         DashboardComponent,
