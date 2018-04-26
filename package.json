@@ -9,7 +9,7 @@
 	],
 	"devDependencies": {
 		"lerna": "^2.9.0",
-		"npm-run-all": "^4.1.2"
-	},
-	"dependencies": {}
+		"npm-run-all": "^4.1.2",
+		"yarn": "^1.6.0"
+	}
 }

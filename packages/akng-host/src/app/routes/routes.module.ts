@@ -30,7 +30,9 @@ import {TodolistService} from './todolist/todolist.service'
 @NgModule({
     imports: [ SharedModule, RouteRoutingModule ],
     providers:[
-        LogService   , LogService2,TodolistService
+        LogService   , 
+        LogService2
+       // TodolistService
     ],
     declarations: [
         DashboardComponent,
