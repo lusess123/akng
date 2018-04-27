@@ -4,9 +4,9 @@ import {Component} from '@angular/core';
     {
         selector: 'codepage', 
         template: `
-           <page-header>
+          
            <h6>代码生成</h6>
-           </page-header>
+         
            <div style="margin-bottom: 2rem;">  
            <input nz-input placeholder="请输入组件名"   (input)="aaa($event)"   /></div>
            <div >
@@ -33,9 +33,9 @@ import {Component} from '@angular/core';
  {
    selector: '${regName}', 
    template: \`
-   <page-header>
+  
    <h6>${regName}</h6>
-   </page-header>
+   
 \`
   })
 export class ${regName}Component {}

@@ -5,9 +5,9 @@ import { LogService ,LogService2} from './son/log.service'
 
 
 @Component({selector: 'lifecycle', template: `
-   <page-header>
+   
    <h6>lifecycle</h6>
-   </page-header>
+  
    
 
    <div nz-row>

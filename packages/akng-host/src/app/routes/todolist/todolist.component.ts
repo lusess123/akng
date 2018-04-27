@@ -6,9 +6,7 @@ import {TodolistService} from './todolist.service'
         providers: [TodolistService], 
         selector: 'todolist', 
         template: `
-   <page-header>
    <h6>todolist demo</h6>
-   </page-header>
    <div>  
    <input nz-input  (keyup.enter)="add()"   (blur)="add()" [(ngModel)]="vm.AddText" />
    <div><br/></div>
