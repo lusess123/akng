@@ -12,15 +12,18 @@ import { UserRegisterResultComponent } from './passport/register-result/register
 import { CallbackComponent } from './callback/callback.component';
 import { UserLockComponent } from './passport/lock/lock.component';
 import { Exception403Component } from './exception/403.component';
-import { Exception404Component } from './exception/404.component';
+import { Exception4041Component } from './exception/4041.component';
 import { Exception500Component } from './exception/500.component';
+import { Exception600Component } from './exception/600.component';
 
 import {TestPageComponent} from './testpage/testpage.component'
 import {HostinfoComponent} from './testpage/hostinfo/hostinfo.component'
 import {Step1Component} from './testpage/step1/step1.component'
 import {TodolistComponent} from './todolist/todolist.component'
-import {CodepgaeComponent} from './codepage/codepage.component'
+import {CodepgaeComponent} from './exception/codepage.component'
 import {lifecycleComponent} from './lifecycle/lifecycle.component'
+
+
 
 import {SonComponent}  from './lifecycle/son/son.component'
 import {LogService,  LogService2 } from './lifecycle/son/log.service'
@@ -44,8 +47,9 @@ import {TodolistService} from './todolist/todolist.service'
         CallbackComponent,
         UserLockComponent,
         Exception403Component,
-        Exception404Component,
+        Exception4041Component,
         Exception500Component,
+        Exception600Component,
         TestPageComponent,
         HostinfoComponent,
         Step1Component,

@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { NzMessageService, NzModalService } from 'ng-zorro-antd';
 import { SocialService, SocialOpenType, TokenService, DA_SERVICE_TOKEN } from '@delon/auth';
-import { ReuseTabService } from '@delon/abc';
+//import { ReuseTabService } from '@delon/abc';
 import { environment } from '@env/environment';
 import { StartupService } from '@core/startup/startup.service';
 
@@ -28,7 +28,7 @@ export class UserLoginComponent implements OnDestroy {
         private modalSrv: NzModalService,
         private settingsService: SettingsService,
         private socialService: SocialService,
-        @Optional() @Inject(ReuseTabService) private reuseTabService: ReuseTabService,
+      //  @Optional() @Inject(ReuseTabService) private reuseTabService: ReuseTabService,
         @Inject(DA_SERVICE_TOKEN) private tokenService: TokenService,
         private startupSrv: StartupService
     ) {
@@ -98,7 +98,7 @@ export class UserLoginComponent implements OnDestroy {
             }
 
             // 清空路由复用信息
-            this.reuseTabService.clear();
+           // this.reuseTabService.clear();
             // 设置Token信息
             this.tokenService.set({
                 token: '123456789',

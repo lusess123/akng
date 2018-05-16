@@ -58,6 +58,7 @@ export class DefaultInterceptor implements HttpInterceptor {
             case 403:
             case 404:
             case 500:
+            case 600:
                 this.goTo(`/${event.status}`);
                 break;
             default:

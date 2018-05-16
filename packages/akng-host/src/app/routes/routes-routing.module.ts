@@ -15,13 +15,15 @@ import { UserRegisterResultComponent } from './passport/register-result/register
 import { CallbackComponent } from './callback/callback.component';
 import { UserLockComponent } from './passport/lock/lock.component';
 import { Exception403Component } from './exception/403.component';
-import { Exception404Component } from './exception/404.component';
+import { Exception4041Component } from './exception/4041.component';
 import { Exception500Component } from './exception/500.component';
+
+import { Exception600Component } from './exception/600.component';
 
 import { TestPageComponent } from './testpage/testpage.component'
 import { HostinfoComponent} from './testpage/hostinfo/hostinfo.component'
 import {TodolistComponent} from './todolist/todolist.component'
-import {CodepgaeComponent} from './codepage/codepage.component'
+import {CodepgaeComponent} from './exception/codepage.component'
 import {lifecycleComponent} from './lifecycle/lifecycle.component'
 
 const routes: Routes = [
@@ -31,10 +33,13 @@ const routes: Routes = [
         children: [
             { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
             { path: 'dashboard', component: DashboardComponent, data: { title: '仪表盘' } },
-            { path: '404', component: Exception404Component },
+            { path:"codepage",component:CodepgaeComponent},
+            { path: '500', component: Exception500Component },
+            { path: '404', component: Exception4041Component },
+            { path: '600', component: Exception600Component },
             { path:'testpage',component:TestPageComponent},
             { path:"todolist",component:TodolistComponent},
-            { path:"codepage",component:CodepgaeComponent},
+          
             {path:"lifecycle",component:lifecycleComponent}
             // 业务子模块
             // { path: 'widgets', loadChildren: './widgets/widgets.module#WidgetsModule' }
@@ -61,13 +66,14 @@ const routes: Routes = [
     { path: 'callback/:type', component: CallbackComponent },
     { path: 'lock', component: UserLockComponent, data: { title: '锁屏', titleI18n: 'lock' } },
     { path: '403', component: Exception403Component },
-    { path: '404', component: Exception404Component },
+   // { path: '404', component: Exception404Component },
+   // { path:"codepage",component:CodepgaeComponent},
     { path: '500', component: Exception500Component },
     { path: '**', redirectTo: 'dashboard' }
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes, { useHash: environment.useHash })],
+    imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]
   })
 export class RouteRoutingModule { }

@@ -13,10 +13,14 @@ const MOCKMODULE = !environment.production ? [ DelonMockModule.forRoot({ data: M
 
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { AlainThemeModule } from '@delon/theme';
-import { DelonABCModule } from '@delon/abc';
+import { DelonABCModule } from './delon.abc.module';
 import { DelonAuthModule } from '@delon/auth';
 import { DelonACLModule } from '@delon/acl';
 import { DelonCacheModule } from '@delon/cache';
+
+
+
+import {  AdImageModule } from '@delon/abc'
 
 // region: global config functions
 

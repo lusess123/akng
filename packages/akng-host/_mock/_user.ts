@@ -14,5 +14,5 @@ export const USERS = {
     // 路由参数
     '/users/:id': (req: MockRequest) => req.params, // /users/100, output: { id: 100 }
     // 发送 Status 错误
-    '/404': () => { throw new MockStatusError(404); }
+   // '/404': () => { throw new MockStatusError(404); }
 };
