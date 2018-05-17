@@ -17,7 +17,14 @@
             "text": "仪表盘",
             "i18n": "dashboard",
             "icon": "icon-speedometer",
-            "children": [{
+            "children": [
+                {
+                "text": "测试表格页面",
+                "link": "/testtable",
+                "i18n": "测试表格页面"
+            },
+                
+                {
                 "text": "测试页面",
                 "link": "/testpage",
                 "i18n": "测试页面"

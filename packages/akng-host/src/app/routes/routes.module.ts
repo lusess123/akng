@@ -23,6 +23,8 @@ import {TodolistComponent} from './todolist/todolist.component'
 import {CodepgaeComponent} from './exception/codepage.component'
 import {lifecycleComponent} from './lifecycle/lifecycle.component'
 
+import {TestTableComponent} from './testtable/testtable.component'
+
 
 
 import {SonComponent}  from './lifecycle/son/son.component'
@@ -57,6 +59,7 @@ import {TodolistService} from './todolist/todolist.service'
         CodepgaeComponent,
         lifecycleComponent,
         SonComponent,
+        TestTableComponent
        // LogService
     ]
 })

@@ -24,7 +24,7 @@ import {
     AdXlsxModule,
     AdZipModule,
     AdNumberToChineseModule,
-    AdLodopModule,
+   // AdLodopModule,
     AdQuickMenuModule,
   //  AdQRModule,
     // charts
@@ -67,7 +67,7 @@ const MODULES = [
     AdXlsxModule,
     AdZipModule,
     AdNumberToChineseModule,
-    AdLodopModule,
+   // AdLodopModule,
     AdQuickMenuModule,
    // AdQRModule,
     // charts
@@ -109,10 +109,10 @@ const MODULES = [
       AdSimpleTableModule.forRoot(),
       //AdReuseTabModule.forRoot(),
       AdFullContentModule.forRoot(),
-      AdXlsxModule.forRoot(),
-      AdZipModule.forRoot(),
+     // AdXlsxModule.forRoot(),
+     // AdZipModule.forRoot(),
       AdNumberToChineseModule.forRoot(),
-      AdLodopModule.forRoot(),
+     // AdLodopModule.forRoot(),
       AdQuickMenuModule.forRoot(),
      // AdQRModule.forRoot(),
       // charts

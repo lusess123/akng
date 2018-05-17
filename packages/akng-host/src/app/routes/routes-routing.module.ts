@@ -26,6 +26,8 @@ import {TodolistComponent} from './todolist/todolist.component'
 import {CodepgaeComponent} from './exception/codepage.component'
 import {lifecycleComponent} from './lifecycle/lifecycle.component'
 
+import {TestTableComponent} from './testtable/testtable.component'
+
 const routes: Routes = [
     {
         path: '',
@@ -39,7 +41,7 @@ const routes: Routes = [
             { path: '600', component: Exception600Component },
             { path:'testpage',component:TestPageComponent},
             { path:"todolist",component:TodolistComponent},
-          
+            {path:"testtable",component:TestTableComponent},
             {path:"lifecycle",component:lifecycleComponent}
             // 业务子模块
             // { path: 'widgets', loadChildren: './widgets/widgets.module#WidgetsModule' }
